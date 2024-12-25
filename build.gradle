@@ -1,6 +1,10 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 plugins {
-	id 'fabric-loom' version '1.5-SNAPSHOT'
 	id 'maven-publish'
+	id 'dev.architectury.loom' version '1.7-SNAPSHOT'
+	id "architectury-plugin" version "3.4-SNAPSHOT"
+	id 'org.jetbrains.kotlin.jvm' version '2.0.20'
 }
 
 version = project.mod_version
@@ -10,24 +14,39 @@ base {
 	archivesName = project.archives_base_name
 }
 
+architectury {
+	platformSetupLoomIde()
+	fabric()
+}
+
+fabricApi {
+	configureDataGeneration()
+}
+
 repositories {
 	// Add repositories to retrieve artifacts from in here.
 	// You should only use this when depending on other mods because
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
+	maven {
+		url = "https://api.modrinth.com/maven"
+	}
+	maven {
+		name = "Cobblemon"
+		url = "https://maven.impactdev.net/repository/development/"
+	}
 }
 
 loom {
-    splitEnvironmentSourceSets()
+	splitEnvironmentSourceSets()
 
 	mods {
-		"template-mod" {
+		"tmcraft" {
 			sourceSet sourceSets.main
 			sourceSet sourceSets.client
 		}
 	}
-
 }
 
 dependencies {
@@ -38,11 +57,18 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	
-	// Uncomment the following line to enable the deprecated Fabric API modules. 
+
+	// Uncomment the following line to enable the deprecated Fabric API modules.
 	// These are included in the Fabric API production distribution and allow you to update your mod to the latest modules at a later more convenient time.
 
 	// modImplementation "net.fabricmc.fabric-api:fabric-api-deprecated:${project.fabric_version}"
+
+	modCompileOnly("com.cobblemon:mod:${project.cobblemon_version}")
+	modRuntimeOnly("com.cobblemon:fabric:${project.cobblemon_version}")
+
+	modImplementation("net.fabricmc:fabric-language-kotlin:${project.fabric_kotlin_version}")
+	compileOnly("net.luckperms:api:${project.luckperms_version}")
+	modImplementation("com.google.code.gson:gson:2.8.9")
 }
 
 processResources {
@@ -65,6 +91,18 @@ java {
 
 	sourceCompatibility = JavaVersion.VERSION_17
 	targetCompatibility = JavaVersion.VERSION_17
+}
+
+kotlin {
+	jvmToolchain {
+		(17)
+	}
+}
+
+tasks.withType(KotlinCompile).configureEach {
+	kotlinOptions {
+		jvmTarget = "17"
+	}
 }
 
 jar {
