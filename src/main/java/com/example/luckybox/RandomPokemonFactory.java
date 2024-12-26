@@ -6,6 +6,7 @@ import com.cobblemon.mod.common.pokemon.Species;
 import com.example.common.SimpleFactory;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class RandomPokemonFactory implements SimpleFactory<Pokemon> {
@@ -26,14 +27,13 @@ public class RandomPokemonFactory implements SimpleFactory<Pokemon> {
 
     @Override
     public Pokemon create() {
-        List<Species> implemented = PokemonSpecies.INSTANCE.getImplemented();
-        List<Species> random = new ArrayList<>(implemented);
-
-        random = random.stream()
+        List<Species> random = new ArrayList<>(PokemonSpecies.INSTANCE.getImplemented().stream()
                 .filter(species -> !FORBIDDEN_SPECIES.contains(species.getResourceIdentifier().toString()))
-                .filter(species -> required.stream().anyMatch(label -> species.getLabels().contains(label)))
-                .filter(species -> forbidden.stream().noneMatch(label -> species.getLabels().contains(label)))
-                .toList();
+                .filter(species -> required.isEmpty() || required.stream().anyMatch(label -> species.getLabels().contains(label)))
+                .filter(species -> forbidden.isEmpty() || forbidden.stream().noneMatch(label -> species.getLabels().contains(label)))
+                .toList());
+
+        Collections.shuffle(random);
 
         return random.get(0).create(LEVEL);
     }

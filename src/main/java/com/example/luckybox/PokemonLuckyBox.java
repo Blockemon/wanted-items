@@ -21,7 +21,12 @@ public class PokemonLuckyBox extends Item {
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        Cobblemon.INSTANCE.getStorage().getParty((ServerPlayerEntity) user).add(factory.create());
+        if (world.isClient()) {
+            return TypedActionResult.pass(user.getStackInHand(hand));
+        }
+
+        ServerPlayerEntity player = world.getServer().getPlayerManager().getPlayer(user.getUuid());
+        Cobblemon.INSTANCE.getStorage().getParty(player).add(factory.create());
 
         if (!user.isCreative()) {
             user.getStackInHand(hand).decrement(1);

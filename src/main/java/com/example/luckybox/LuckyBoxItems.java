@@ -1,6 +1,8 @@
 package com.example.luckybox;
 
+import com.example.TemplateMod;
 import net.minecraft.item.Item;
+import net.minecraft.util.Identifier;
 
 public enum LuckyBoxItems {
     LARGE_LUCKY_BOX("large_lucky_box", new LargeLuckyBox()),
@@ -10,11 +12,19 @@ public enum LuckyBoxItems {
 
     ITEM_LUCKY_BOX("item_lucky_box", new ItemLuckyBox());
 
-    private final String identifier;
+    private final Identifier identifier;
     private final Item item;
 
-    LuckyBoxItems(String identifier, Item item) {
-        this.identifier = identifier;
+    LuckyBoxItems(String path, Item item) {
+        this.identifier = Identifier.of(TemplateMod.MOD_ID, path);
         this.item = item;
+    }
+
+    public Item getItem() {
+        return item;
+    }
+
+    public Identifier getIdentifier() {
+        return identifier;
     }
 }
