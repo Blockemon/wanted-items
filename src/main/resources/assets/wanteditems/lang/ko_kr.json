@@ -1,17 +1,17 @@
 {
   "item_group.wanteditems.title": "Wanted Items",
 
-  "item.wanteditems.gender_swapper": "성별전환토큰",
-  "item.wanteditems.shiny_swapper": "샤이니전환토큰",
+  "item.wanteditems.gender_swapper": "성별전환",
+  "item.wanteditems.shiny_swapper": "샤이니전환",
 
   "item.wanteditems.ev_randomizer": "노력치무작위",
   "item.wanteditems.iv_randomizer": "개체치무작위",
   "item.wanteditems.level_randomizer": "레벨무작위",
 
-  "item.wanteditems.silver_lucky_egg": "은색럭키알",
-  "item.wanteditems.shiny_silver_lucky_egg": "반짝이는 은색럭키알",
-  "item.wanteditems.gold_lucky_egg": "금색럭키알",
-  "item.wanteditems.shiny_gold_lucky_egg": "반짝이는 금색럭키알",
+  "item.wanteditems.silver_lucky_egg": "은색행운의알",
+  "item.wanteditems.shiny_silver_lucky_egg": "반짝이는 은색행운의알",
+  "item.wanteditems.gold_lucky_egg": "금색행운의알",
+  "item.wanteditems.shiny_gold_lucky_egg": "반짝이는 금색행운의알",
   "item.wanteditems.item_lucky_box": "아이템럭키박스",
 
   "item.wanteditems.bottle_cap": "은색병뚜껑",
