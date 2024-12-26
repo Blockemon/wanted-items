@@ -24,7 +24,7 @@ public class WantedItems implements ModInitializer {
 	public static final Identifier ITEM_GROUP_ID = Identifier.of(WantedItems.MOD_ID, "item_group");
 	public static final RegistryKey<ItemGroup> ITEM_GROUP_REGISTRY_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), ITEM_GROUP_ID);
 	private static final ItemGroup ITEM_GROUP = FabricItemGroup.builder()
-			.icon(() -> new ItemStack(StatEditorItems.GOLD_BOTTLE_CAP.getItem()))
+			.icon(() -> new ItemStack(LuckyBoxItems.SHINY_GOLD_LUCKY_EGG.getItem()))
 			.displayName(Text.translatable("item_group.wanteditems.title"))
 			.build();
 

@@ -5,10 +5,10 @@ import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 
 public enum LuckyBoxItems {
-    LARGE_LUCKY_BOX("large_lucky_box", new LargeLuckyBox()),
-    LARGE_SHINY_LUCKY_BOX("large_shiny_lucky_box", new LargeShinyLuckyBox()),
-    SMALL_LUCKY_BOX("small_lucky_box", new SmallLuckyBox()),
-    SMALL_SHINY_LUCKY_BOX("small_shiny_lucky_box", new SmallShinyLuckyBox()),
+    GOLD_LUCKY_EGG("gold_lucky_egg", new GoldLuckyEgg()),
+    SHINY_GOLD_LUCKY_EGG("shiny_gold_lucky_egg", new ShinyGoldLuckyEgg()),
+    SILVER_LUCKY_EGG("silver_lucky_egg", new SilverLuckyEgg()),
+    SHINY_SILVER_LUCKY_EGG("shiny_silver_lucky_egg", new ShinySilverLuckyEgg()),
 
     ITEM_LUCKY_BOX("item_lucky_box", new ItemLuckyBox());
 

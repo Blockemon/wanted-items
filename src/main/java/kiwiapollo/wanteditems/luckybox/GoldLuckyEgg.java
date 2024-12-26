@@ -1,7 +1,7 @@
 package kiwiapollo.wanteditems.luckybox;
 
-public class LargeLuckyBox extends PokemonLuckyBox {
-    public LargeLuckyBox() {
+public class GoldLuckyEgg extends PokemonLuckyBox {
+    public GoldLuckyEgg() {
         super(new RandomPokemonFactory());
     }
 }
