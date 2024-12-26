@@ -4,6 +4,7 @@ import com.cobblemon.mod.common.api.pokemon.stats.Stats;
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
 import com.cobblemon.mod.common.pokemon.IVs;
 import com.cobblemon.mod.common.pokemon.Pokemon;
+import com.example.common.UserOwnedPokemonTargetingItem;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -11,30 +12,29 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 
-public class SilverBottleCap extends Item {
+public class BottleCap extends UserOwnedPokemonTargetingItem {
     private final Stats stats;
 
-    public SilverBottleCap() {
+    public BottleCap() {
         this(null);
     }
 
-    public SilverBottleCap(Stats stats) {
+    public BottleCap(Stats stats) {
         super(new Settings());
 
         this.stats = stats;
     }
 
     @Override
-    public ActionResult useOnEntity(ItemStack stack, PlayerEntity user, LivingEntity entity, Hand hand) {
-        if (!(entity instanceof PokemonEntity)) {
-            return ActionResult.PASS;
-        }
-
+    protected ActionResult useOnPokemon(ItemStack stack, PlayerEntity user, Pokemon pokemon, Hand hand) {
         if (stats == null) {
             return ActionResult.PASS;
         }
 
-        Pokemon pokemon = ((PokemonEntity) entity).getPokemon();
+        if (pokemon.getIvs().get(stats).equals(IVs.MAX_VALUE)) {
+            return ActionResult.PASS;
+        }
+
         pokemon.setIV(stats, IVs.MAX_VALUE);
 
         if (!user.isCreative()) {

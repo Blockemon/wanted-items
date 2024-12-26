@@ -6,15 +6,16 @@ import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 
 public enum StatModifierItems {
-    GOLDEN_BOTTLE_CAP("golden_bottle_cap", new GoldenBottleCap()),
-    SILVER_BOTTLE_CAP("silver_bottle_cap", new SilverBottleCap()),
+    BOTTLE_CAP("bottle_cap", new BottleCap()),
 
-    BLACK_BOTTLE_CAP("black_bottle_cap", new SilverBottleCap(Stats.ATTACK)),
-    YELLOW_BOTTLE_CAP("yello_bottle_cap", new SilverBottleCap(Stats.DEFENCE)),
-    RED_BOTTLE_CAP("red_bottle_cap", new SilverBottleCap(Stats.HP)),
-    BLUE_BOTTLE_CAP("blue_bottle_cap", new SilverBottleCap(Stats.SPECIAL_ATTACK)),
-    GREEN_BOTTLE_CAP("green_bottle_cap", new SilverBottleCap(Stats.SPECIAL_DEFENCE)),
-    PINK_BOTTLE_CAP("pink_bottle_cap", new SilverBottleCap(Stats.SPEED)),
+    BOTTLE_CAP_ATK("bottle_cap_atk", new BottleCap(Stats.ATTACK)),
+    BOTTLE_CAP_DEF("bottle_cap_def", new BottleCap(Stats.DEFENCE)),
+    BOTTLE_CAP_HP("bottle_cap_hp", new BottleCap(Stats.HP)),
+    BOTTLE_CAP_SPA("bottle_cap_spa", new BottleCap(Stats.SPECIAL_ATTACK)),
+    BOTTLE_CAP_SPD("bottle_cap_spd", new BottleCap(Stats.SPECIAL_DEFENCE)),
+    BOTTLE_CAP_SPE("bottle_cap_spe", new BottleCap(Stats.SPEED)),
+
+    GOLD_BOTTLE_CAP("gold_bottle_cap", new GoldBottleCap()),
 
     DRY_ROOT("dry_root", new DryRoot());
 
@@ -24,5 +25,13 @@ public enum StatModifierItems {
     StatModifierItems(String path, Item item) {
         this.identifier = Identifier.of(TemplateMod.MOD_ID, path);
         this.item = item;
+    }
+
+    public Item getItem() {
+        return item;
+    }
+
+    public Identifier getIdentifier() {
+        return identifier;
     }
 }

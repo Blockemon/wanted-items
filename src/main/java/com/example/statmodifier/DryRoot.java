@@ -2,7 +2,10 @@ package com.example.statmodifier;
 
 import com.cobblemon.mod.common.api.pokemon.stats.Stats;
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
+import com.cobblemon.mod.common.pokemon.EVs;
+import com.cobblemon.mod.common.pokemon.IVs;
 import com.cobblemon.mod.common.pokemon.Pokemon;
+import com.example.common.UserOwnedPokemonTargetingItem;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -12,21 +15,23 @@ import net.minecraft.util.Hand;
 
 import java.util.Arrays;
 
-public class DryRoot extends Item {
+public class DryRoot extends UserOwnedPokemonTargetingItem {
     public DryRoot() {
         super(new Item.Settings());
     }
 
     @Override
-    public ActionResult useOnEntity(ItemStack stack, PlayerEntity user, LivingEntity entity, Hand hand) {
-        if (!(entity instanceof PokemonEntity)) {
+    protected ActionResult useOnPokemon(ItemStack stack, PlayerEntity user, Pokemon pokemon, Hand hand) {
+        if (pokemon.getEvs().equals(EVs.Companion.createEmpty())) {
             return ActionResult.PASS;
         }
 
-        Pokemon pokemon = ((PokemonEntity) entity).getPokemon();
-        Arrays.stream(Stats.values()).forEach(stats -> {
-            pokemon.setEV(stats, 0);
-        });
+        pokemon.setEV(Stats.ATTACK, 0);
+        pokemon.setEV(Stats.DEFENCE, 0);
+        pokemon.setEV(Stats.SPECIAL_ATTACK, 0);
+        pokemon.setEV(Stats.SPECIAL_DEFENCE, 0);
+        pokemon.setEV(Stats.HP, 0);
+        pokemon.setEV(Stats.SPEED, 0);
 
         if (!user.isCreative()) {
             stack.decrement(1);
