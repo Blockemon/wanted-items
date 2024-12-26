@@ -1,10 +1,12 @@
 package kiwiapollo.wanteditems.randomizer;
 
+import com.cobblemon.mod.common.CobblemonSounds;
 import com.cobblemon.mod.common.pokemon.Pokemon;
 import kiwiapollo.wanteditems.common.UserOwnedPokemonTargetingItem;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 
@@ -26,6 +28,7 @@ public class LevelRandomizer extends UserOwnedPokemonTargetingItem {
             stack.decrement(1);
         }
 
+        user.playSound(CobblemonSounds.MEDICINE_PILLS_USE, SoundCategory.PLAYERS, 1F, 1F);
         return ActionResult.SUCCESS;
     }
 }
