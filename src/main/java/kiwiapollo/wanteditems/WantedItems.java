@@ -21,6 +21,8 @@ import java.util.Arrays;
 public class WantedItems implements ModInitializer {
 	public static final String MOD_ID = "wanteditems";
 
+	public static final Identifier ITEM_GROUP_ID = Identifier.of(WantedItems.MOD_ID, "item_group");
+	public static final RegistryKey<ItemGroup> ITEM_GROUP_REGISTRY_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), ITEM_GROUP_ID);
 	private static final ItemGroup ITEM_GROUP = FabricItemGroup.builder()
 			.icon(() -> new ItemStack(StatEditorItems.GOLD_BOTTLE_CAP.getItem()))
 			.displayName(Text.translatable("item_group.wanteditems.title"))
@@ -44,10 +46,9 @@ public class WantedItems implements ModInitializer {
 			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
 		});
 
-		Registry.register(Registries.ITEM_GROUP, Identifier.of(MOD_ID, "test_group"), ITEM_GROUP);
+		Registry.register(Registries.ITEM_GROUP, ITEM_GROUP_REGISTRY_KEY, ITEM_GROUP);
 
-		var groupRegistryKey = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(MOD_ID, "test_group"));
-		ItemGroupEvents.modifyEntriesEvent(groupRegistryKey).register(itemGroup -> {
+		ItemGroupEvents.modifyEntriesEvent(ITEM_GROUP_REGISTRY_KEY).register(itemGroup -> {
 			Arrays.stream(StatEditorItems.values()).forEach(item -> {
 				itemGroup.add(item.getItem());
 			});
