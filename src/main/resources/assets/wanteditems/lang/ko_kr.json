@@ -1,25 +1,26 @@
 {
   "item_group.wanteditems.title": "Wanted Items",
 
-  "item.wanteditems.gender_swapper": "Gender Swapper",
-  "item.wanteditems.shiny_swapper": "Shiny Swapper",
+  "item.wanteditems.gender_swapper": "성별전환토큰",
+  "item.wanteditems.shiny_swapper": "샤이니전환토큰",
 
-  "item.wanteditems.ev_randomizer": "EV Randomizer",
-  "item.wanteditems.iv_randomizer": "IV Randomizer",
-  "item.wanteditems.level_randomizer": "Level Randomizer",
+  "item.wanteditems.ev_randomizer": "노력치무작위",
+  "item.wanteditems.iv_randomizer": "개체치무작위",
+  "item.wanteditems.level_randomizer": "레벨무작위",
 
-  "item.wanteditems.small_lucky_box": "Small Lucky Box",
-  "item.wanteditems.small_shiny_lucky_box": "Small Shiny Lucky Box",
-  "item.wanteditems.large_lucky_box": "Large Lucky Box",
-  "item.wanteditems.large_shiny_lucky_box": "Large Shiny Lucky Box",
+  "item.wanteditems.silver_lucky_egg": "은색럭키알",
+  "item.wanteditems.shiny_silver_lucky_egg": "반짝이는 은색럭키알",
+  "item.wanteditems.gold_lucky_egg": "금색럭키알",
+  "item.wanteditems.shiny_gold_lucky_egg": "반짝이는 금색럭키알",
+  "item.wanteditems.item_lucky_box": "아이템럭키박스",
 
-  "item.wanteditems.bottle_cap": "Bottle Cap",
-  "item.wanteditems.bottle_cap_hp": "Bottle Cap (HP)",
-  "item.wanteditems.bottle_cap_atk": "Bottle Cap (Attack)",
-  "item.wanteditems.bottle_cap_def": "Bottle Cap (Defense)",
-  "item.wanteditems.bottle_cap_spa": "Bottle Cap (Special Attack)",
-  "item.wanteditems.bottle_cap_spd": "Bottle Cap (Special Defense)",
-  "item.wanteditems.bottle_cap_spe": "Bottle Cap (Speed)",
-  "item.wanteditems.gold_bottle_cap": "Gold Bottle Cap",
-  "item.wanteditems.dry_root": "Dry Root"
+  "item.wanteditems.bottle_cap": "은색병뚜껑",
+  "item.wanteditems.bottle_cap_hp": "은색병뚜껑 (HP)",
+  "item.wanteditems.bottle_cap_atk": "은색병뚜껑 (공격)",
+  "item.wanteditems.bottle_cap_def": "은색병뚜껑 (방어)",
+  "item.wanteditems.bottle_cap_spa": "은색병뚜껑 (특수공격)",
+  "item.wanteditems.bottle_cap_spd": "은색병뚜껑 (특수방어)",
+  "item.wanteditems.bottle_cap_spe": "은색병뚜껑 (스피드)",
+  "item.wanteditems.gold_bottle_cap": "금색병뚜껑",
+  "item.wanteditems.dry_root": "말라비틀어진도라지"
 }

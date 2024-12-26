@@ -8,10 +8,11 @@
   "item.wanteditems.iv_randomizer": "IV Randomizer",
   "item.wanteditems.level_randomizer": "Level Randomizer",
 
-  "item.wanteditems.small_lucky_box": "Small Lucky Box",
-  "item.wanteditems.small_shiny_lucky_box": "Small Shiny Lucky Box",
-  "item.wanteditems.large_lucky_box": "Large Lucky Box",
-  "item.wanteditems.large_shiny_lucky_box": "Large Shiny Lucky Box",
+  "item.wanteditems.silver_lucky_egg": "Silver Lucky Box",
+  "item.wanteditems.shiny_silver_lucky_egg": "Shiny Silver Lucky Box",
+  "item.wanteditems.gold_lucky_egg": "Gold Lucky Box",
+  "item.wanteditems.shiny_gold_lucky_egg": "Shiny Gold Lucky Box",
+  "item.wanteditems.item_lucky_box": "Item Lucky Box",
 
   "item.wanteditems.bottle_cap": "Bottle Cap",
   "item.wanteditems.bottle_cap_hp": "Bottle Cap (HP)",
