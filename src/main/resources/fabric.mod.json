@@ -16,10 +16,10 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"kiwiapollo.wanteditems.TemplateMod"
+			"kiwiapollo.wanteditems.WantedItems"
 		],
 		"client": [
-			"kiwiapollo.wanteditems.TemplateModClient"
+			"kiwiapollo.wanteditems.WantedItemsClient"
 		]
 	},
 	"mixins": [
