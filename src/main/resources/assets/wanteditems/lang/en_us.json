@@ -1,7 +1,6 @@
 {
-  "itemgroup.wanteditems": "Wanted Items",
-  
-  "item.wanteditems.caught_ball_swapper": "Caught Ball Swapper",
+  "item_group.wanteditems.title": "Wanted Items",
+
   "item.wanteditems.gender_swapper": "Gender Swapper",
   "item.wanteditems.shiny_swapper": "Shiny Swapper",
 
@@ -22,10 +21,5 @@
   "item.wanteditems.bottle_cap_spd": "Bottle Cap (Special Defense)",
   "item.wanteditems.bottle_cap_spe": "Bottle Cap (Speed)",
   "item.wanteditems.gold_bottle_cap": "Gold Bottle Cap",
-  "item.wanteditems.dry_root": "Dry Root",
-
-  "message.wanteditems.error.notYourPokemon": "That Pokemon doesn't belong to you.",
-  "message.wanteditems.error.alreadyPerfectIv": "That Pokemon already has a perfect %d IV.",
-  "message.wanteditems.error.alreadyPerfectIvs": "That Pokemon already has perfect IVs.",
-  "message.wanteditems.error.alreadyHasZeroEvs": "That Pokemon has no effort to take away."
+  "item.wanteditems.dry_root": "Dry Root"
 }

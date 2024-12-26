@@ -23,7 +23,7 @@ public class WantedItems implements ModInitializer {
 
 	private static final ItemGroup ITEM_GROUP = FabricItemGroup.builder()
 			.icon(() -> new ItemStack(StatEditorItems.GOLD_BOTTLE_CAP.getItem()))
-			.displayName(Text.translatable("item_group.tutorial.test_group"))
+			.displayName(Text.translatable("item_group.wanteditems.title"))
 			.build();
 
 	@Override
