@@ -1,8 +1,49 @@
 # README
 
-## TODO
+WantedItem is a Cobblemon side mod adding special items for server admins.
 
-- [ ] Cobblemizer
-- [ ] Unimplemented Items
-- [ ] luckybox
+- Pokemon Lucky Egg (Gives random Pokemon)
+- Item Lucky Box
+- Randomizer
+- Bottle Caps
+
+This is not unique work of mine and is motivated work of Cobblemizer and Umimplemented Items. Most of the textures have been reworked based on Cobblemon Assets but few of them are from the two mods. I do not intend to provide crafting recipes or acquisition methods for items included in this mod.
+
+## Lucky Egg/Lucky Box
+
+Pokémon Lucky Egg grants random Pokémon to the player. Gold Lucky Egg grants random Pokémon from implemented Pokémon which includes those added via data packs. Silver Lucky Egg excludes Legendary, Mythical, Paradox and Ultra Beast Pokémon. 
+
+Item Lucky Box grants random Cobblemon items.
+
+## Randomizer
+
+- EV Randomizer
+- IV Randomizer
+- Level Randomizer
+
+## Bottle Cap
+
+Bottle Cap maximizes Pokémon IVs. Gold Bottle Cap maximizes all IVs, while colored Bottle Caps maximizes specific IV.
+
+## Swappers
+
+- Gender Swapper
+- Shiny Swapper
+
+## LICENSE
+
+### MIT
+- Source Code
+
+### CC BY-NC-SA 4.0
+- Translations
+- Item Textures
+
+## Credit
+
+- [Cobblemizer](https://modrinth.com/mod/cobblemizer) by Dragomordor
+- [UnImplemented Items](https://modrinth.com/mod/cobblemon-unimplemented-items) by tmetcalfe89
+- [Cobblemon Assets](https://gitlab.com/cable-mc/cobblemon-assets)
+
+## TODO
 - [ ] Lucky Block
