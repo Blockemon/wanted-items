@@ -1,11 +1,11 @@
-package com.example.statmodifier;
+package com.example.stateditor;
 
 import com.cobblemon.mod.common.api.pokemon.stats.Stats;
 import com.example.TemplateMod;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 
-public enum StatModifierItems {
+public enum StatEditorItems {
     BOTTLE_CAP("bottle_cap", new BottleCap()),
 
     BOTTLE_CAP_ATK("bottle_cap_atk", new BottleCap(Stats.ATTACK)),
@@ -22,7 +22,7 @@ public enum StatModifierItems {
     private final Identifier identifier;
     private final Item item;
 
-    StatModifierItems(String path, Item item) {
+    StatEditorItems(String path, Item item) {
         this.identifier = Identifier.of(TemplateMod.MOD_ID, path);
         this.item = item;
     }

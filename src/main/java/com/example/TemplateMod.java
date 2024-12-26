@@ -2,7 +2,7 @@ package com.example;
 
 import com.example.luckybox.LuckyBoxItems;
 import com.example.randomizer.RandomizerItems;
-import com.example.statmodifier.StatModifierItems;
+import com.example.stateditor.StatEditorItems;
 import com.example.swapper.PropertySwapperItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -22,13 +22,13 @@ public class TemplateMod implements ModInitializer {
 	public static final String MOD_ID = "template-mod";
 
 	private static final ItemGroup ITEM_GROUP = FabricItemGroup.builder()
-			.icon(() -> new ItemStack(StatModifierItems.GOLD_BOTTLE_CAP.getItem()))
+			.icon(() -> new ItemStack(StatEditorItems.GOLD_BOTTLE_CAP.getItem()))
 			.displayName(Text.translatable("item_group.tutorial.test_group"))
 			.build();
 
 	@Override
 	public void onInitialize() {
-		Arrays.stream(StatModifierItems.values()).forEach(item -> {
+		Arrays.stream(StatEditorItems.values()).forEach(item -> {
 			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
 		});
 
@@ -48,7 +48,7 @@ public class TemplateMod implements ModInitializer {
 
 		var groupRegistryKey = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(MOD_ID, "test_group"));
 		ItemGroupEvents.modifyEntriesEvent(groupRegistryKey).register(itemGroup -> {
-			Arrays.stream(StatModifierItems.values()).forEach(item -> {
+			Arrays.stream(StatEditorItems.values()).forEach(item -> {
 				itemGroup.add(item.getItem());
 			});
 
