@@ -3,6 +3,7 @@ package kiwiapollo.wanteditems.stateditor;
 import com.cobblemon.mod.common.CobblemonSounds;
 import com.cobblemon.mod.common.api.pokemon.stats.Stats;
 import com.cobblemon.mod.common.pokemon.EVs;
+import com.cobblemon.mod.common.pokemon.IVs;
 import com.cobblemon.mod.common.pokemon.Pokemon;
 import kiwiapollo.wanteditems.common.UserOwnedPokemonTargetingItem;
 import net.minecraft.entity.player.PlayerEntity;
@@ -20,7 +21,7 @@ public class DryRoot extends UserOwnedPokemonTargetingItem {
 
     @Override
     protected ActionResult useOnPokemon(ItemStack stack, PlayerEntity user, Pokemon pokemon, Hand hand) {
-        if (pokemon.getEvs().equals(EVs.Companion.createEmpty())) {
+        if (isZeroEVs(pokemon)) {
             user.playSound(SoundEvents.ITEM_SHIELD_BLOCK, SoundCategory.PLAYERS, 1F, 1F);
             return ActionResult.PASS;
         }
@@ -38,5 +39,14 @@ public class DryRoot extends UserOwnedPokemonTargetingItem {
 
         user.playSound(CobblemonSounds.MEDICINE_PILLS_USE, SoundCategory.PLAYERS, 1F, 1F);
         return ActionResult.SUCCESS;
+    }
+    
+    private boolean isZeroEVs(Pokemon pokemon) {
+        return pokemon.getEvs().get(Stats.ATTACK).equals(0)
+                && pokemon.getEvs().get(Stats.DEFENCE).equals(0)
+                && pokemon.getEvs().get(Stats.SPECIAL_ATTACK).equals(0)
+                && pokemon.getEvs().get(Stats.SPECIAL_DEFENCE).equals(0)
+                && pokemon.getEvs().get(Stats.HP).equals(0)
+                && pokemon.getEvs().get(Stats.SPEED).equals(0);
     }
 }
