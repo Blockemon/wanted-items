@@ -8,6 +8,7 @@ import kiwiapollo.wanteditems.common.UserOwnedPokemonTargetingItem;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 
@@ -31,6 +32,7 @@ public class BottleCap extends UserOwnedPokemonTargetingItem {
         }
 
         if (pokemon.getIvs().get(stats).equals(IVs.MAX_VALUE)) {
+            user.playSound(SoundEvents.ITEM_SHIELD_BLOCK, SoundCategory.PLAYERS, 1F, 1F);
             return ActionResult.PASS;
         }
 
