@@ -1,27 +1,21 @@
 package com.example.swapper;
 
-import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
 import com.cobblemon.mod.common.pokemon.Gender;
 import com.cobblemon.mod.common.pokemon.Pokemon;
-import net.minecraft.entity.LivingEntity;
+import com.example.common.UserOwnedPokemonTargetingItem;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 
-public class GenderSwapper extends Item {
+public class GenderSwapper extends UserOwnedPokemonTargetingItem {
     public GenderSwapper() {
         super(new Item.Settings());
     }
 
     @Override
-    public ActionResult useOnEntity(ItemStack stack, PlayerEntity user, LivingEntity entity, Hand hand) {
-        if (!(entity instanceof PokemonEntity)) {
-            return ActionResult.PASS;
-        }
-
-        Pokemon pokemon = ((PokemonEntity) entity).getPokemon();
+    protected ActionResult useOnPokemon(ItemStack stack, PlayerEntity user, Pokemon pokemon, Hand hand) {
         switch (pokemon.getGender()) {
             case GENDERLESS -> {
                 return ActionResult.PASS;

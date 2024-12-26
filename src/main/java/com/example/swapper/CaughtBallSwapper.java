@@ -1,11 +1,10 @@
 package com.example.swapper;
 
 import com.cobblemon.mod.common.api.tags.CobblemonItemTags;
-import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
 import com.cobblemon.mod.common.item.PokeBallItem;
 import com.cobblemon.mod.common.pokeball.PokeBall;
 import com.cobblemon.mod.common.pokemon.Pokemon;
-import net.minecraft.entity.LivingEntity;
+import com.example.common.UserOwnedPokemonTargetingItem;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -16,23 +15,22 @@ import net.minecraft.util.Hand;
 
 import java.util.List;
 
-public class CaughtBallSwapper extends Item {
+public class CaughtBallSwapper extends UserOwnedPokemonTargetingItem {
     public CaughtBallSwapper() {
         super(new Item.Settings());
     }
 
     @Override
-    public ActionResult useOnEntity(ItemStack stack, PlayerEntity user, LivingEntity entity, Hand hand) {
-        if (!(entity instanceof PokemonEntity)) {
-            return ActionResult.PASS;
-        }
-
+    protected ActionResult useOnPokemon(ItemStack stack, PlayerEntity user, Pokemon pokemon, Hand hand) {
         if (!isHoldingPokeBall(user, getOtherHand(hand))) {
             return ActionResult.PASS;
         }
 
         PokeBall pokeBall = ((PokeBallItem) user.getStackInHand(getOtherHand(hand)).getItem()).getPokeBall();
-        Pokemon pokemon = ((PokemonEntity) entity).getPokemon();
+        if (pokemon.getCaughtBall() == pokeBall) {
+            return ActionResult.PASS;
+        }
+
         pokemon.setCaughtBall(pokeBall);
 
         if (!user.isCreative()) {
