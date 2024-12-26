@@ -19,7 +19,7 @@ import net.minecraft.util.Identifier;
 import java.util.Arrays;
 
 public class WantedItems implements ModInitializer {
-	public static final String MOD_ID = "template-mod";
+	public static final String MOD_ID = "wanteditems";
 
 	private static final ItemGroup ITEM_GROUP = FabricItemGroup.builder()
 			.icon(() -> new ItemStack(StatEditorItems.GOLD_BOTTLE_CAP.getItem()))
