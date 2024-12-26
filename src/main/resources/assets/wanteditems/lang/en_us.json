@@ -1,0 +1,31 @@
+{
+  "itemgroup.wanteditems": "Wanted Items",
+  
+  "item.wanteditems.caught_ball_swapper": "Caught Ball Swapper",
+  "item.wanteditems.gender_swapper": "Gender Swapper",
+  "item.wanteditems.shiny_swapper": "Shiny Swapper",
+
+  "item.wanteditems.ev_randomizer": "EV Randomizer",
+  "item.wanteditems.iv_randomizer": "IV Randomizer",
+  "item.wanteditems.level_randomizer": "Level Randomizer",
+
+  "item.wanteditems.small_lucky_box": "Small Lucky Box",
+  "item.wanteditems.small_shiny_lucky_box": "Small Shiny Lucky Box",
+  "item.wanteditems.large_lucky_box": "Large Lucky Box",
+  "item.wanteditems.large_shiny_lucky_box": "Large Shiny Lucky Box",
+
+  "item.wanteditems.bottle_cap": "Bottle Cap",
+  "item.wanteditems.bottle_cap_hp": "Bottle Cap (HP)",
+  "item.wanteditems.bottle_cap_atk": "Bottle Cap (Attack)",
+  "item.wanteditems.bottle_cap_def": "Bottle Cap (Defense)",
+  "item.wanteditems.bottle_cap_spa": "Bottle Cap (Special Attack)",
+  "item.wanteditems.bottle_cap_spd": "Bottle Cap (Special Defense)",
+  "item.wanteditems.bottle_cap_spe": "Bottle Cap (Speed)",
+  "item.wanteditems.gold_bottle_cap": "Gold Bottle Cap",
+  "item.wanteditems.dry_root": "Dry Root",
+
+  "message.wanteditems.error.notYourPokemon": "That Pokemon doesn't belong to you.",
+  "message.wanteditems.error.alreadyPerfectIv": "That Pokemon already has a perfect %d IV.",
+  "message.wanteditems.error.alreadyPerfectIvs": "That Pokemon already has perfect IVs.",
+  "message.wanteditems.error.alreadyHasZeroEvs": "That Pokemon has no effort to take away."
+}
