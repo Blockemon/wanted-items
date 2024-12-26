@@ -1,11 +1,13 @@
 package com.example;
 
+import com.example.luckybox.LuckyBoxItems;
+import com.example.randomizer.RandomizerItems;
+import com.example.statmodifier.StatModifierItems;
+import com.example.swapper.PropertySwapperItems;
 import net.fabricmc.api.ModInitializer;
 
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -13,30 +15,54 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
+import java.util.Arrays;
 
 public class TemplateMod implements ModInitializer {
-
-	// an instance of our new item
-	public static final Item CUSTOM_ITEM = new Item(new FabricItemSettings());
+	public static final String MOD_ID = "template-mod";
 
 	private static final ItemGroup ITEM_GROUP = FabricItemGroup.builder()
-			.icon(() -> new ItemStack(CUSTOM_ITEM))
-			.displayName(Text.translatable("itemGroup.tutorial.test_group"))
+			.icon(() -> new ItemStack(StatModifierItems.GOLD_BOTTLE_CAP.getItem()))
+			.displayName(Text.translatable("item_group.tutorial.test_group"))
 			.build();
 
 	@Override
 	public void onInitialize() {
-		Registry.register(Registries.ITEM,
-				new Identifier("tutorial", "custom_item"), CUSTOM_ITEM);
-		Registry.register(Registries.ITEM_GROUP,
-				new Identifier("tutorial", "test_group"), ITEM_GROUP);
+		Arrays.stream(StatModifierItems.values()).forEach(item -> {
+			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
+		});
 
-		var groupRegistryKey = RegistryKey.of(Registries.ITEM_GROUP.getKey(),
-				new Identifier("tutorial", "test_group"));
+		Arrays.stream(PropertySwapperItems.values()).forEach(item -> {
+			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
+		});
+
+		Arrays.stream(LuckyBoxItems.values()).forEach(item -> {
+			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
+		});
+
+		Arrays.stream(RandomizerItems.values()).forEach(item -> {
+			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
+		});
+
+		Registry.register(Registries.ITEM_GROUP, Identifier.of(MOD_ID, "test_group"), ITEM_GROUP);
+
+		var groupRegistryKey = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(MOD_ID, "test_group"));
 		ItemGroupEvents.modifyEntriesEvent(groupRegistryKey).register(itemGroup -> {
-			itemGroup.add(CUSTOM_ITEM);
+			Arrays.stream(StatModifierItems.values()).forEach(item -> {
+				itemGroup.add(item.getItem());
+			});
+
+			Arrays.stream(PropertySwapperItems.values()).forEach(item -> {
+				itemGroup.add(item.getItem());
+			});
+
+			Arrays.stream(LuckyBoxItems.values()).forEach(item -> {
+				itemGroup.add(item.getItem());
+			});
+
+			Arrays.stream(RandomizerItems.values()).forEach(item -> {
+				itemGroup.add(item.getItem());
+			});
 		});
 	}
 }
