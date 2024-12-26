@@ -1,8 +1,8 @@
 {
 	"schemaVersion": 1,
-	"id": "template-mod",
+	"id": "wanteditems",
 	"version": "${version}",
-	"name": "Template Mod",
+	"name": "Wanted Items",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
 		"Me!"
