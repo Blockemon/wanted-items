@@ -42,7 +42,7 @@ loom {
 	splitEnvironmentSourceSets()
 
 	mods {
-		"tmcraft" {
+		"wanteditems" {
 			sourceSet sourceSets.main
 			sourceSet sourceSets.client
 		}
