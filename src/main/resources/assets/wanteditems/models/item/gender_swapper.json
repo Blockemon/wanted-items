@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "template-mod:item/gender_swapper"
+    "layer0": "wanteditems:item/gender_swapper"
   }
 }
