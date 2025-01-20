@@ -22,5 +22,9 @@
   "item.wanteditems.bottle_cap_spd": "Bottle Cap (Special Defense)",
   "item.wanteditems.bottle_cap_spe": "Bottle Cap (Speed)",
   "item.wanteditems.gold_bottle_cap": "Gold Bottle Cap",
-  "item.wanteditems.dry_root": "Dry Root"
+  "item.wanteditems.dry_root": "Dry Root",
+
+  "item.wanteditems.error.has_maximum_stats": "%s already has the maximum stats.",
+  "item.wanteditems.error.has_zero_stats": "%s already has zero stats.",
+  "item.wanteditems.error.is_genderless": "%s is genderless."
 }

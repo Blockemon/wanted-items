@@ -22,5 +22,9 @@
   "item.wanteditems.bottle_cap_spd": "은색병뚜껑 (특수방어)",
   "item.wanteditems.bottle_cap_spe": "은색병뚜껑 (스피드)",
   "item.wanteditems.gold_bottle_cap": "금색병뚜껑",
-  "item.wanteditems.dry_root": "말라비틀어진도라지"
+  "item.wanteditems.dry_root": "말라비틀어진도라지",
+
+  "item.wanteditems.error.has_maximum_stats": "%s(은)는 이미 스탯이 최대치입니다.",
+  "item.wanteditems.error.has_zero_stats": "%s(은)는 이미 스탯이 0 입니다.",
+  "item.wanteditems.error.is_genderless": "%s 성별이 없습니다."
 }
