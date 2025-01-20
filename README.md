@@ -2,7 +2,7 @@
 
 WantedItem is a Cobblemon side mod adding special items for server admins.
 
-- Pokemon Lucky Egg (Gives random Pokemon)
+- Pokemon Lucky Egg
 - Item Lucky Box
 - Randomizer
 - Bottle Caps
