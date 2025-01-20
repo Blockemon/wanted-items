@@ -14,6 +14,7 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
@@ -50,7 +51,7 @@ public class DryRoot extends Item implements PokemonSelectingItem {
     public @Nullable TypedActionResult<ItemStack> applyToPokemon(@NotNull ServerPlayerEntity player, @NotNull ItemStack itemStack, @NotNull Pokemon pokemon) {
         if (isZeroEVs(pokemon)) {
             player.playSound(SoundEvents.ITEM_SHIELD_BLOCK, SoundCategory.PLAYERS, 1F, 1F);
-            player.sendMessage(Text.translatable("item.wanteditems.error.has_zero_stats", pokemon.getSpecies().getTranslatedName()));
+            player.sendMessage(Text.translatable("item.wanteditems.error.has_zero_stats", pokemon.getSpecies().getTranslatedName()).formatted(Formatting.RED));
             return TypedActionResult.pass(itemStack);
         }
 
