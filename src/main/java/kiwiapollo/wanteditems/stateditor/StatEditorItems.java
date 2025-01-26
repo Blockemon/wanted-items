@@ -16,8 +16,7 @@ public enum StatEditorItems {
     BOTTLE_CAP_SPE("bottle_cap_spe", new BottleCap(Stats.SPEED)),
 
     GOLD_BOTTLE_CAP("gold_bottle_cap", new GoldBottleCap()),
-
-    DRY_ROOT("dry_root", new DryRoot());
+    COPPER_BOTTLE_CAP("copper_bottle_cap", new CopperBottleCap());
 
     private final Identifier identifier;
     private final Item item;

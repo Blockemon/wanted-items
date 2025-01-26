@@ -21,8 +21,8 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class DryRoot extends Item implements PokemonSelectingItem {
-    public DryRoot() {
+public class CopperBottleCap extends Item implements PokemonSelectingItem {
+    public CopperBottleCap() {
         super(new Item.Settings());
     }
 

@@ -8,10 +8,10 @@
   "item.wanteditems.iv_randomizer": "IV Randomizer",
   "item.wanteditems.level_randomizer": "Level Randomizer",
 
-  "item.wanteditems.silver_lucky_egg": "Silver Lucky Box",
-  "item.wanteditems.shiny_silver_lucky_egg": "Shiny Silver Lucky Box",
-  "item.wanteditems.gold_lucky_egg": "Gold Lucky Box",
-  "item.wanteditems.shiny_gold_lucky_egg": "Shiny Gold Lucky Box",
+  "item.wanteditems.silver_lucky_egg": "Silver Lucky Egg",
+  "item.wanteditems.shiny_silver_lucky_egg": "Shiny Silver Lucky Egg",
+  "item.wanteditems.gold_lucky_egg": "Gold Lucky Egg",
+  "item.wanteditems.shiny_gold_lucky_egg": "Shiny Gold Lucky Egg",
   "item.wanteditems.item_lucky_box": "Item Lucky Box",
 
   "item.wanteditems.bottle_cap": "Bottle Cap",
@@ -22,7 +22,7 @@
   "item.wanteditems.bottle_cap_spd": "Bottle Cap (Special Defense)",
   "item.wanteditems.bottle_cap_spe": "Bottle Cap (Speed)",
   "item.wanteditems.gold_bottle_cap": "Gold Bottle Cap",
-  "item.wanteditems.dry_root": "Dry Root",
+  "item.wanteditems.copper_bottle_cap": "Copper Bottle Cap",
 
   "item.wanteditems.error.has_maximum_stats": "%s already has the maximum stats.",
   "item.wanteditems.error.has_zero_stats": "%s already has zero stats.",
