@@ -1,8 +1,8 @@
-package kiwiapollo.wanteditems.luckybox;
+package kiwiapollo.wanteditems.luckyegg;
 
 import java.util.List;
 
-public class ShinySilverLuckyEgg extends PokemonLuckyBox {
+public class ShinySilverLuckyEgg extends LuckyEgg {
     public ShinySilverLuckyEgg() {
         super(new RandomShinyPokemonFactory(
                 List.of(),

@@ -1,5 +1,6 @@
 package kiwiapollo.wanteditems.luckybox;
 
+import kiwiapollo.wanteditems.common.SimpleFactory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -9,13 +10,12 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
-import java.util.List;
-
 public class ItemLuckyBox extends Item {
-    private static final List<Item> FORBIDDEN_ITEMS = List.of();
+    private final SimpleFactory<Item> factory;
 
-    public ItemLuckyBox() {
+    public ItemLuckyBox(SimpleFactory<Item> factory) {
         super(new Item.Settings());
+        this.factory = factory;
     }
 
     @Override
@@ -24,7 +24,7 @@ public class ItemLuckyBox extends Item {
             return TypedActionResult.pass(user.getStackInHand(hand));
         }
 
-        ItemStack random = new RandomItemFactory().create().getDefaultStack();
+        ItemStack random = factory.create().getDefaultStack();
         if (!user.giveItemStack(random)) {
             user.dropItem(random, true);
         }

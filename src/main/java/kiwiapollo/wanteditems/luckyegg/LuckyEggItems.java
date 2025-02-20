@@ -1,21 +1,21 @@
-package kiwiapollo.wanteditems.luckybox;
+package kiwiapollo.wanteditems.luckyegg;
 
 import kiwiapollo.wanteditems.WantedItems;
+import kiwiapollo.wanteditems.luckybox.mythsandlegends.MythsAndLegends;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 
-public enum LuckyBoxItems {
+public enum LuckyEggItems {
     GOLD_LUCKY_EGG("gold_lucky_egg", new GoldLuckyEgg()),
     SHINY_GOLD_LUCKY_EGG("shiny_gold_lucky_egg", new ShinyGoldLuckyEgg()),
     SILVER_LUCKY_EGG("silver_lucky_egg", new SilverLuckyEgg()),
-    SHINY_SILVER_LUCKY_EGG("shiny_silver_lucky_egg", new ShinySilverLuckyEgg()),
-
-    ITEM_LUCKY_BOX("item_lucky_box", new ItemLuckyBox());
+    SHINY_SILVER_LUCKY_EGG("shiny_silver_lucky_egg", new ShinySilverLuckyEgg());
 
     private final Identifier identifier;
     private final Item item;
 
-    LuckyBoxItems(String path, Item item) {
+    LuckyEggItems(String path, Item item) {
         this.identifier = Identifier.of(WantedItems.MOD_ID, path);
         this.item = item;
     }

@@ -1,4 +1,4 @@
-package kiwiapollo.wanteditems.luckybox;
+package kiwiapollo.wanteditems.luckyegg;
 
 import com.cobblemon.mod.common.Cobblemon;
 import com.cobblemon.mod.common.pokemon.Pokemon;
@@ -13,10 +13,10 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
-public class PokemonLuckyBox extends Item {
+public class LuckyEgg extends Item {
     private final SimpleFactory<Pokemon> factory;
 
-    public PokemonLuckyBox(SimpleFactory<Pokemon> factory) {
+    public LuckyEgg(SimpleFactory<Pokemon> factory) {
         super(new Item.Settings());
         this.factory = factory;
     }

@@ -1,4 +1,4 @@
-package kiwiapollo.wanteditems.luckybox;
+package kiwiapollo.wanteditems.luckyegg;
 
 import com.cobblemon.mod.common.api.pokemon.PokemonSpecies;
 import com.cobblemon.mod.common.pokemon.Pokemon;

@@ -1,4 +1,4 @@
-package kiwiapollo.wanteditems.luckybox;
+package kiwiapollo.wanteditems.luckybox.cobblemon;
 
 import com.cobblemon.mod.common.CobblemonItems;
 import kiwiapollo.wanteditems.common.SimpleFactory;
@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class RandomItemFactory implements SimpleFactory<Item> {
+public class CobblemonItemFactory implements SimpleFactory<Item> {
     private static final List<Item> FORBIDDEN_ITEMS = List.of();
 
     @Override
