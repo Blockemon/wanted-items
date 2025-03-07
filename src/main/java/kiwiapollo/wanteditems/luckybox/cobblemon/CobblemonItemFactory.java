@@ -9,10 +9,22 @@ import java.util.Collections;
 import java.util.List;
 
 public class CobblemonItemFactory implements SimpleFactory<Item> {
-    private static final List<Item> FORBIDDEN_ITEMS = List.of();
+    private static final List<Item> FORBIDDEN_ITEMS = List.of(
+            CobblemonItems.POKEMON_MODEL
+    );
 
     @Override
     public Item create() {
+        Item item;
+
+        do {
+            item = createRandomCobblemonItem();
+        } while(FORBIDDEN_ITEMS.contains(item));
+
+        return item;
+    }
+
+    private Item createRandomCobblemonItem() {
         List<Item> random = new ArrayList<>(CobblemonItems.INSTANCE.all());
         random.removeAll(FORBIDDEN_ITEMS);
         Collections.shuffle(random);
