@@ -9,11 +9,30 @@ WantedItem is a Cobblemon side mod adding special items for server admins.
 
 This is not unique work of mine and is motivated work of Cobblemizer and Umimplemented Items. Most of the textures have been reworked based on Cobblemon Assets but few of them are from the two mods. I do not intend to provide crafting recipes or acquisition methods for items included in this mod.
 
-## Lucky Egg/Lucky Box
+## Lucky Egg
 
-Pokémon Lucky Egg grants random Pokémon to the player. Gold Lucky Egg grants random Pokémon from implemented Pokémon which includes those added via data packs. Silver Lucky Egg excludes Legendary, Mythical, Paradox and Ultra Beast Pokémon. 
+Pokémon Lucky Egg grants random Pokémon to the player. Shiny Lucky Eggs gives the shiny version of the Pokémon.
 
-Item Lucky Box grants random Cobblemon items.
+### Gold Lucky Egg
+
+Gold Lucky Egg gives any implemented Pokémon.
+
+### Silver Lucky Egg
+
+Silver Lucky Egg gives Pokémon excluding Legendary, Mythical, Paradox and Ultra Beast Pokémon.
+
+## Lucky Box
+
+Item Lucky Box grants random items.
+
+### Cobblemon Lucky Box
+
+Cobblemon Lucky Box gives random Cobblemon items except, 
+- Cobblemon Model items.
+
+### Myths and Legends Lucky Box
+
+Myths and Legends Lucky Box gives random Myths and Legends items.
 
 ## Randomizer
 
