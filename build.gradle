@@ -39,6 +39,7 @@ repositories {
 	maven {
 		url = "https://mvnrepository.com/artifact/dev.architectury/architectury-fabric"
 	}
+	mavenCentral()
 }
 
 loom {
@@ -71,9 +72,10 @@ dependencies {
 
 	modImplementation("net.fabricmc:fabric-language-kotlin:${project.fabric_kotlin_version}")
 	compileOnly("net.luckperms:api:${project.luckperms_version}")
-	modImplementation("com.google.code.gson:gson:2.8.9")
+	modImplementation("com.google.code.gson:gson:${project.gson_version}")
 
 	modImplementation("maven.modrinth:cobblemon-myths-and-legends-sidemod:${project.myths_and_legends_version}")
+	modRuntimeOnly("com.moandjiezana.toml:toml4j:${project.toml_version}")
 	modRuntimeOnly("dev.architectury:architectury-fabric:${project.architectury_api_version}")
 }
 
