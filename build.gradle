@@ -71,9 +71,10 @@ dependencies {
 
 	modImplementation("net.fabricmc:fabric-language-kotlin:${project.fabric_kotlin_version}")
 	compileOnly("net.luckperms:api:${project.luckperms_version}")
+	modImplementation("com.google.code.gson:gson:2.8.9")
+
 	modImplementation("maven.modrinth:cobblemon-myths-and-legends-sidemod:${project.myths_and_legends_version}")
 	modRuntimeOnly("dev.architectury:architectury-fabric:${project.architectury_api_version}")
-	modImplementation("com.google.code.gson:gson:2.8.9")
 }
 
 processResources {

@@ -1,8 +1,6 @@
 package kiwiapollo.wanteditems.luckyegg;
 
 import kiwiapollo.wanteditems.WantedItems;
-import kiwiapollo.wanteditems.luckybox.mythsandlegends.MythsAndLegends;
-import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 

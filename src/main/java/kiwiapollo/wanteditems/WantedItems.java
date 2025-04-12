@@ -1,7 +1,7 @@
 package kiwiapollo.wanteditems;
 
+import com.github.d0ctorleon.mythsandlegends.MythsAndLegends;
 import kiwiapollo.wanteditems.luckybox.cobblemon.CobblemonLuckyBoxItems;
-import kiwiapollo.wanteditems.luckybox.mythsandlegends.MythsAndLegends;
 import kiwiapollo.wanteditems.luckybox.mythsandlegends.MythsAndLegendsLuckyBoxItems;
 import kiwiapollo.wanteditems.luckyegg.LuckyEggItems;
 import kiwiapollo.wanteditems.randomizer.RandomizerItems;

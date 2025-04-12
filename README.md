@@ -44,6 +44,7 @@ Bottle Cap maximizes Pokémon IVs. Gold Bottle Cap maximizes all IVs, while colo
 - [Cobblemizer](https://modrinth.com/mod/cobblemizer) by Dragomordor
 - [UnImplemented Items](https://modrinth.com/mod/cobblemon-unimplemented-items) by tmetcalfe89
 - [Cobblemon Assets](https://gitlab.com/cable-mc/cobblemon-assets)
+- [Christmas](https://polymart.org/product/7274/weekly-dot-christmas) by Hungry22
 
 ## TODO
 - [ ] Lucky Block

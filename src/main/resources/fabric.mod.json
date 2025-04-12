@@ -15,6 +15,9 @@
 	"icon": "assets/wanteditems/icon.png",
 	"environment": "*",
 	"entrypoints": {
+		"fabric-datagen": [
+			"kiwiapollo.wanteditems.datagen.DataGenerator"
+		],
 		"main": [
 			"kiwiapollo.wanteditems.WantedItems"
 		],
