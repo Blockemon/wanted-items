@@ -10,10 +10,10 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
-public class ItemLuckyBox extends Item {
+public class LuckyBox extends Item {
     private final SimpleFactory<Item> factory;
 
-    public ItemLuckyBox(SimpleFactory<Item> factory) {
+    public LuckyBox(SimpleFactory<Item> factory) {
         super(new Item.Settings());
         this.factory = factory;
     }
