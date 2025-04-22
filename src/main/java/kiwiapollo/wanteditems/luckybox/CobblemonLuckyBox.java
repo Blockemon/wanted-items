@@ -1,6 +1,4 @@
-package kiwiapollo.wanteditems.luckybox.cobblemon;
-
-import kiwiapollo.wanteditems.luckybox.LuckyBox;
+package kiwiapollo.wanteditems.luckybox;
 
 public class CobblemonLuckyBox extends LuckyBox {
     public CobblemonLuckyBox() {

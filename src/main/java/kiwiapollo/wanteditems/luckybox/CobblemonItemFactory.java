@@ -1,4 +1,4 @@
-package kiwiapollo.wanteditems.luckybox.cobblemon;
+package kiwiapollo.wanteditems.luckybox;
 
 import com.cobblemon.mod.common.CobblemonItems;
 import kiwiapollo.wanteditems.common.SimpleFactory;

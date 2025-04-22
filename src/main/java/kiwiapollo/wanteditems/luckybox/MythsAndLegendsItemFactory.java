@@ -1,6 +1,5 @@
-package kiwiapollo.wanteditems.luckybox.mythsandlegends;
+package kiwiapollo.wanteditems.luckybox;
 
-import com.cobblemon.mod.common.CobblemonItems;
 import com.github.d0ctorleon.mythsandlegends.MythsAndLegends;
 import kiwiapollo.wanteditems.common.SimpleFactory;
 import kiwiapollo.wanteditems.datagen.ModTagRegistry;
