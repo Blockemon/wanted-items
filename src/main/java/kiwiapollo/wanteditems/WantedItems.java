@@ -1,5 +1,6 @@
 package kiwiapollo.wanteditems;
 
+import kiwiapollo.wanteditems.duplicator.MiscItems;
 import kiwiapollo.wanteditems.luckybox.LuckyBoxItems;
 import kiwiapollo.wanteditems.luckyegg.LuckyEggItems;
 import kiwiapollo.wanteditems.randomizer.RandomizerItems;
@@ -38,6 +39,7 @@ public class WantedItems implements ModInitializer {
 		addLuckyEggItems();
 		addRandomizerItems();
 		addLuckyBoxItems();
+		addMiscItems();
 	}
 
 	private void addItemGroup() {
@@ -99,6 +101,18 @@ public class WantedItems implements ModInitializer {
 
 		ItemGroupEvents.modifyEntriesEvent(ITEM_GROUP_REGISTRY_KEY).register(itemGroup -> {
 			Arrays.stream(LuckyBoxItems.values()).filter(LuckyBoxItems::canBeAdded).forEach(item -> {
+				itemGroup.add(item.getItem());
+			});
+		});
+	}
+
+	private void addMiscItems() {
+		Arrays.stream(MiscItems.values()).forEach(item -> {
+			Registry.register(Registries.ITEM, item.getIdentifier(), item.getItem());
+		});
+
+		ItemGroupEvents.modifyEntriesEvent(ITEM_GROUP_REGISTRY_KEY).register(itemGroup -> {
+			Arrays.stream(MiscItems.values()).forEach(item -> {
 				itemGroup.add(item.getItem());
 			});
 		});

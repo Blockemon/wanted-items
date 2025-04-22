@@ -25,6 +25,8 @@
   "item.wanteditems.gold_bottle_cap": "Gold Bottle Cap",
   "item.wanteditems.copper_bottle_cap": "Copper Bottle Cap",
 
+  "item.wanteditems.ditto_residue": "Ditto Residue",
+
   "item.wanteditems.error.has_maximum_stats": "%s already has the maximum stats.",
   "item.wanteditems.error.has_zero_stats": "%s already has zero stats.",
   "item.wanteditems.error.is_genderless": "%s is genderless."
