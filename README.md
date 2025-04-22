@@ -49,6 +49,12 @@ Bottle Cap maximizes Pokémon IVs. Gold Bottle Cap maximizes all IVs, while colo
 - Gender Swapper
 - Shiny Swapper
 
+## Misc
+
+### Ditto Residue
+
+In spite of its name, Ditto Residue does nothing. Server admins can use it as an ingredient for duplicating items.
+
 ## LICENSE
 
 ### MIT
