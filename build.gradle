@@ -77,6 +77,7 @@ dependencies {
 	modImplementation("maven.modrinth:cobblemon-myths-and-legends-sidemod:${project.myths_and_legends_version}")
 	modRuntimeOnly("com.moandjiezana.toml:toml4j:${project.toml_version}")
 	modRuntimeOnly("dev.architectury:architectury-fabric:${project.architectury_api_version}")
+	modRuntimeOnly("maven.modrinth:emi:${project.emi_version}")
 }
 
 processResources {
