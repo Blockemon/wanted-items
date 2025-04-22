@@ -3,9 +3,9 @@
 	"id": "wanteditems",
 	"version": "${version}",
 	"name": "Wanted Items",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Cobblemon side mod adding special items for server admins",
 	"authors": [
-		"Me!"
+		"KiwiFlavoredApollo"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
