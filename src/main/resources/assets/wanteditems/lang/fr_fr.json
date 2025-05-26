@@ -1,0 +1,33 @@
+{
+    "item_group.wanteditems.title": "Wanted Items",
+
+    "item.wanteditems.gender_swapper": "Alter-Sexe",
+    "item.wanteditems.shiny_swapper": "Alter-Chroma",
+
+    "item.wanteditems.ev_randomizer": "Aléa-EV",
+    "item.wanteditems.iv_randomizer": "Aléa-IV",
+    "item.wanteditems.level_randomizer": "Aléa-Niv",
+
+    "item.wanteditems.silver_lucky_egg": "Œuf Mystère",
+    "item.wanteditems.shiny_silver_lucky_egg": "Œuf Mystère Chroma",
+    "item.wanteditems.gold_lucky_egg": "Œuf Mystère Doré",
+    "item.wanteditems.shiny_gold_lucky_egg": "Œuf Mystère Doré Chroma",
+    "item.wanteditems.cobblemon_lucky_box": "Boîte Mystère Cobblemon",
+    "item.wanteditems.myths_and_legends_lucky_box": "Boîte Mystère Mythes et Légendes",
+
+    "item.wanteditems.bottle_cap": "Capsule d'Argent",
+    "item.wanteditems.bottle_cap_hp": "Capsule d'Argent (PV)",
+    "item.wanteditems.bottle_cap_atk": "Capsule d'Argent (ATQ)",
+    "item.wanteditems.bottle_cap_def": "Capsule d'Argent (DEF)",
+    "item.wanteditems.bottle_cap_spa": "Capsule d'Argent (ATQ. SPÉ.)",
+    "item.wanteditems.bottle_cap_spd": "Capsule d'Argent (DEF. SPÉ.)",
+    "item.wanteditems.bottle_cap_spe": "Capsule d'Argent (VITESSE)",
+    "item.wanteditems.gold_bottle_cap": "Capsule d'Or",
+    "item.wanteditems.copper_bottle_cap": "Capsule de Bronze",
+
+    "item.wanteditems.ditto_residue": "Résidu de Ditto",
+
+    "item.wanteditems.error.has_maximum_stats": "%s possède déjà ses stats au maximum.",
+    "item.wanteditems.error.has_zero_stats": "%s possède déjà ses stats au minimum.",
+    "item.wanteditems.error.is_genderless": "%s est assexué."
+}

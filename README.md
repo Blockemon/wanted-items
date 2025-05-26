@@ -78,6 +78,10 @@ In spite of its name, Ditto Residue does nothing. Server admins can use it as an
 - Translations
 - Item Textures
 
+## Translation
+
+- [Voldir](https://discordapp.com/users/291233979196243968) (French)
+
 ## Credit
 
 - [Cobblemizer](https://modrinth.com/mod/cobblemizer) by Dragomordor
