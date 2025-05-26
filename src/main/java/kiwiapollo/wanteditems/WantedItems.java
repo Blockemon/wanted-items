@@ -1,6 +1,6 @@
 package kiwiapollo.wanteditems;
 
-import kiwiapollo.wanteditems.duplicator.MiscItems;
+import kiwiapollo.wanteditems.misc.MiscItems;
 import kiwiapollo.wanteditems.luckybox.LuckyBoxItems;
 import kiwiapollo.wanteditems.luckyegg.LuckyEggItems;
 import kiwiapollo.wanteditems.randomizer.RandomizerItems;

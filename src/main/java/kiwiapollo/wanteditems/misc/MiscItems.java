@@ -1,4 +1,4 @@
-package kiwiapollo.wanteditems.duplicator;
+package kiwiapollo.wanteditems.misc;
 
 import kiwiapollo.wanteditems.WantedItems;
 import net.minecraft.item.Item;
