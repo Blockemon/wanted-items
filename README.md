@@ -23,7 +23,7 @@ Silver Lucky Egg gives any implemented Pokémon except,
 - Legendary
 - Mythical
 - Paradox
-- Ultra Beast Pokémon.
+- Ultra Beast Pokémon
 
 ## Lucky Box
 
@@ -32,7 +32,7 @@ Item Lucky Box grants random items.
 ### Cobblemon Lucky Box
 
 Cobblemon Lucky Box gives random Cobblemon items except, 
-- Cobblemon Model items.
+- Cobblemon Model items
 
 ### Myths and Legends Lucky Box
 
@@ -79,7 +79,7 @@ Bottle Cap maximizes specified Pokémon IV.
 
 ### Gold Bottle Cap
 
-Gold Bottle Cap maximizes all IVs
+Gold Bottle Cap maximizes all IVs.
 
 ### Copper Bottle Cap
 
