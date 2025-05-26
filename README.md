@@ -19,7 +19,11 @@ Gold Lucky Egg gives any implemented Pokémon.
 
 ### Silver Lucky Egg
 
-Silver Lucky Egg gives Pokémon excluding Legendary, Mythical, Paradox and Ultra Beast Pokémon.
+Silver Lucky Egg gives any implemented Pokémon except,
+- Legendary
+- Mythical
+- Paradox
+- Ultra Beast Pokémon.
 
 ## Lucky Box
 
@@ -42,7 +46,17 @@ Myths and Legends Lucky Box gives random Myths and Legends items.
 
 ## Bottle Cap
 
-Bottle Cap maximizes Pokémon IVs. Gold Bottle Cap maximizes all IVs, while colored Bottle Caps maximizes specific IV.
+### Bottle Cap
+
+Bottle Cap maximizes specified Pokémon IV. 
+
+### Gold Bottle Cap
+
+Gold Bottle Cap maximizes all IVs
+
+### Copper Bottle Cap
+
+Copper Bottle Cap zeroes specified Pokémon IV.
 
 ## Swappers
 
