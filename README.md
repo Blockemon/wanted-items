@@ -38,6 +38,33 @@ Cobblemon Lucky Box gives random Cobblemon items except,
 
 Myths and Legends Lucky Box gives random Myths and Legends items.
 
+### Gold Candy Lucky Box
+
+Gold Candy Lucky Box gives random Candy items except,
+- Exp Candy XS
+- Exp Candy S
+- Exp Candy M
+
+### Silver Candy Lucky Box
+
+Silver Candy Lucky Box gives random Candy items.
+
+### Gold Poke Ball Lucky Box
+
+Gold Poke Ball Lucky Box gives random Poke Ball items.
+
+### Silver Poke Ball Lucky Box
+
+Silver Poke Ball Lucky Box gives random Poke Ball items except,
+- Master Ball
+- Cherish Ball
+- Ancient Origin Ball
+
+### Ancient Poke Ball Lucky Box
+
+Ancient Poke Ball Lucky Box gives random Ancient Poke Ball items except,
+- Ancient Origin Ball
+
 ## Randomizer
 
 - EV Randomizer
