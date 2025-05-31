@@ -50,8 +50,8 @@ public class WantedItems implements ModInitializer {
 	}
 
 	private void addLuckyBoxItems() {
-		addCobblemonLuckyBoxItems();
 		addMythsAndLegendsLuckyBoxItems();
+		addCobblemonLuckyBoxItems();
 	}
 
 	private void addCobblemonLuckyBoxItems() {
