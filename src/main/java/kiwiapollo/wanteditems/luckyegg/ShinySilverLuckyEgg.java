@@ -6,7 +6,7 @@ public class ShinySilverLuckyEgg extends LuckyEgg {
     public ShinySilverLuckyEgg() {
         super(new RandomShinyPokemonFactory(
                 List.of(),
-                List.of("legendary", "mythical", "paradox", "ultra_beast")
+                List.of("legendary", "mythical", "paradox", "ultra_beast", "mega")
         ));
     }
 }
