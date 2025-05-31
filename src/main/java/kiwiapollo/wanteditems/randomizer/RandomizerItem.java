@@ -1,17 +1,18 @@
-package kiwiapollo.wanteditems.swapper;
+package kiwiapollo.wanteditems.randomizer;
 
 import kiwiapollo.wanteditems.WantedItems;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 
-public enum PropertySwapperItems {
-    GENDER_SWAPPER("gender_swapper", new GenderSwapper()),
-    SHINY_SWAPPER("shiny_swapper", new ShinySwapper());
+public enum RandomizerItem {
+    EV_RANDOMIZER("ev_randomizer", new EVRandomizer()),
+    IV_RANDOMIZER("iv_randomizer", new IVRandomizer()),
+    LEVEL_RANDOMIZER("level_randomizer", new LevelRandomizer());
 
     private final Identifier identifier;
     private final Item item;
 
-    PropertySwapperItems(String path, Item item) {
+    RandomizerItem(String path, Item item) {
         this.identifier = Identifier.of(WantedItems.MOD_ID, path);
         this.item = item;
     }

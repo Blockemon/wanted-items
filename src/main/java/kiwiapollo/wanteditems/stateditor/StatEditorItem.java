@@ -5,7 +5,7 @@ import kiwiapollo.wanteditems.WantedItems;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 
-public enum StatEditorItems {
+public enum StatEditorItem {
     BOTTLE_CAP("bottle_cap", new BottleCap()),
 
     BOTTLE_CAP_ATK("bottle_cap_atk", new BottleCap(Stats.ATTACK)),
@@ -21,7 +21,7 @@ public enum StatEditorItems {
     private final Identifier identifier;
     private final Item item;
 
-    StatEditorItems(String path, Item item) {
+    StatEditorItem(String path, Item item) {
         this.identifier = Identifier.of(WantedItems.MOD_ID, path);
         this.item = item;
     }

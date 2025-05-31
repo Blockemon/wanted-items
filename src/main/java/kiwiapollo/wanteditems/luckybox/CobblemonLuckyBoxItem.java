@@ -4,9 +4,8 @@ import kiwiapollo.wanteditems.WantedItems;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 
-public enum LuckyBoxItems {
+public enum CobblemonLuckyBoxItem {
     COBBLEMON_LUCKY_BOX("cobblemon_lucky_box", new CobblemonLuckyBox()),
-    MYTHS_AND_LEGENDS_LUCKY_BOX("myths_and_legends_lucky_box", new MythsAndLegendsLuckyBox()),
     GOLD_CANDY_LUCKY_BOX("gold_candy_lucky_box", new GoldCandyLuckyBox()),
     SILVER_CANDY_LUCKY_BOX("silver_candy_lucky_box", new SilverCandyLuckyBox()),
     GOLD_POKE_BALL_LUCKY_BOX("gold_poke_ball_lucky_box", new GoldPokeBallLuckyBox()),
@@ -16,7 +15,7 @@ public enum LuckyBoxItems {
     private final Identifier identifier;
     private final Item item;
 
-    LuckyBoxItems(String path, Item item) {
+    CobblemonLuckyBoxItem(String path, Item item) {
         this.identifier = Identifier.of(WantedItems.MOD_ID, path);
         this.item = item;
     }
@@ -27,14 +26,5 @@ public enum LuckyBoxItems {
 
     public Identifier getIdentifier() {
         return identifier;
-    }
-
-    public boolean canBeAdded() {
-        if (item instanceof OptionalItem) {
-            return ((OptionalItem) item).test();
-
-        } else {
-            return true;
-        }
     }
 }

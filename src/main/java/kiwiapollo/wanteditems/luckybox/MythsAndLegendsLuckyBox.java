@@ -12,14 +12,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class MythsAndLegendsLuckyBox extends LuckyBox implements OptionalItem {
+public class MythsAndLegendsLuckyBox extends LuckyBox {
     public MythsAndLegendsLuckyBox() {
         super(new MythsAndLegendsItemFactory());
-    }
-
-    @Override
-    public boolean test() {
-        return FabricLoader.getInstance().isModLoaded(MythsAndLegends.MOD_ID);
     }
 
     private static class MythsAndLegendsItemFactory implements SimpleFactory<Item> {

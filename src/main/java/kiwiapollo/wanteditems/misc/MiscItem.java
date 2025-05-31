@@ -1,27 +1,25 @@
-package kiwiapollo.wanteditems.randomizer;
+package kiwiapollo.wanteditems.misc;
 
 import kiwiapollo.wanteditems.WantedItems;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 
-public enum RandomizerItems {
-    EV_RANDOMIZER("ev_randomizer", new EVRandomizer()),
-    IV_RANDOMIZER("iv_randomizer", new IVRandomizer()),
-    LEVEL_RANDOMIZER("level_randomizer", new LevelRandomizer());
+public enum MiscItem {
+    DITTO_RESIDUE("ditto_residue", new DittoResidue());
 
     private final Identifier identifier;
     private final Item item;
 
-    RandomizerItems(String path, Item item) {
+    MiscItem(String path, Item item) {
         this.identifier = Identifier.of(WantedItems.MOD_ID, path);
         this.item = item;
     }
 
-    public Item getItem() {
-        return item;
-    }
-
     public Identifier getIdentifier() {
         return identifier;
+    }
+
+    public Item getItem() {
+        return item;
     }
 }
