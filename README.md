@@ -20,10 +20,11 @@ Gold Lucky Egg gives any implemented Pokémon.
 ### Silver Lucky Egg
 
 Silver Lucky Egg gives any implemented Pokémon except,
-- Legendary
-- Mythical
-- Paradox
+- Legendary Pokémon
+- Mythical Pokémon
+- Paradox Pokémon
 - Ultra Beast Pokémon
+- Mega Evolved Pokémon (Ascension Megamons)
 
 ## Lucky Box
 
@@ -98,7 +99,7 @@ In spite of its name, Ditto Residue does nothing. Server admins can use it as an
 
 ## LICENSE
 
-### MIT
+### GPL 3.0
 - Source Code
 
 ### CC BY-NC-SA 4.0
