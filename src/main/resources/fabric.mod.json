@@ -33,11 +33,11 @@
 		}
 	],
 	"depends": {
-		"fabricloader": ">=0.15.7",
-		"minecraft": "1.20.1",
-		"java": ">=17",
-		"fabric-api": "*",
-		"cobblemon": "1.5.2"
+		"fabricloader": ">=0.15.11",
+		"minecraft": "1.21.1",
+		"java": ">=21",
+		"fabric-api": ">=0.102.0+1.21.1",
+		"cobblemon": "1.6.1"
 	},
 	"suggests": {
 		"mythsandlegends": "*"
