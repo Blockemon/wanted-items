@@ -5,7 +5,8 @@
 	"name": "Wanted Items",
 	"description": "Cobblemon side mod adding special items for server admins",
 	"authors": [
-		"KiwiFlavoredApollo"
+		"KiwiFlavoredApollo",
+		"JustPanda (BlackBeltPanda)"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
@@ -20,23 +21,14 @@
 		],
 		"main": [
 			"kiwiapollo.wanteditems.WantedItems"
-		],
-		"client": [
-			"kiwiapollo.wanteditems.WantedItemsClient"
 		]
 	},
-	"mixins": [
-		"wanteditems.mixins.json",
-		{
-			"config": "wanteditems.client.mixins.json",
-			"environment": "client"
-		}
-	],
+	"mixins": [],
 	"depends": {
 		"fabricloader": ">=0.15.11",
 		"minecraft": "1.21.1",
 		"java": ">=21",
-		"fabric-api": ">=0.102.0+1.21.1",
+		"fabric-api": "*",
 		"cobblemon": "1.6.1"
 	},
 	"suggests": {
