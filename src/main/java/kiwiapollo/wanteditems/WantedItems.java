@@ -1,6 +1,5 @@
 package kiwiapollo.wanteditems;
 
-import com.github.d0ctorleon.mythsandlegends.MythsAndLegends;
 import kiwiapollo.wanteditems.luckybox.CobblemonLuckyBoxItem;
 import kiwiapollo.wanteditems.luckybox.MythsAndLegendsLuckyBoxItem;
 import kiwiapollo.wanteditems.misc.MiscItem;
@@ -67,7 +66,7 @@ public class WantedItems implements ModInitializer {
 	}
 
 	private void addMythsAndLegendsLuckyBoxItems() {
-		if (!FabricLoader.getInstance().isModLoaded(MythsAndLegends.MOD_ID)) {
+		if (!FabricLoader.getInstance().isModLoaded(com.github.d0ctorleon.mythsandlegends.MythsAndLegends.MOD_ID)) {
 			return;
 		}
 

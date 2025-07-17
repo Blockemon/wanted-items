@@ -49,44 +49,42 @@ public class GenderSwapper extends Item implements PokemonSelectingItem {
 
     @Override
     public @Nullable TypedActionResult<ItemStack> applyToPokemon(@NotNull ServerPlayerEntity player, @NotNull ItemStack itemStack, @NotNull Pokemon pokemon) {
-        switch (pokemon.getGender()) {
-            case GENDERLESS -> {
-                player.playSound(SoundEvents.ITEM_SHIELD_BLOCK, SoundCategory.PLAYERS, 1F, 1F);
-                player.sendMessage(Text.translatable("item.wanteditems.error.is_genderless", pokemon.getSpecies().getTranslatedName()).formatted(Formatting.RED));
-                return TypedActionResult.pass(itemStack);
+        Gender gender = pokemon.getGender();
+        switch (gender) {
+            case MALE -> pokemon.setGender(Gender.FEMALE);
+            case FEMALE -> pokemon.setGender(Gender.MALE);
+            default -> {
+                return useError(player, pokemon, itemStack, "item.wanteditems.error.is_genderless");
             }
-            case FEMALE -> {
-                setMale(pokemon);
-            }
-            case MALE -> {
-                setFemale(pokemon);
-            }
+        }
+
+        // Fixed-gender Pokémon aren't genderless, so they're not covered by the above check. Need to double-check the gender actually changed.
+        if (gender == pokemon.getGender()) {
+            return useError(player, pokemon, itemStack, "item.wanteditems.error.is_fixed_gender");
         }
 
         if (!player.isCreative()) {
             itemStack.decrement(1);
         }
 
-        player.playSound(CobblemonSounds.MEDICINE_PILLS_USE, SoundCategory.PLAYERS, 1F, 1F);
+        player.playSoundToPlayer(CobblemonSounds.MEDICINE_PILLS_USE, SoundCategory.PLAYERS, 1F, 1F);
         return TypedActionResult.success(itemStack);
     }
 
-    private void setMale(Pokemon pokemon) {
-        pokemon.setGender(Gender.MALE);
-    }
-
-    private void setFemale(Pokemon pokemon) {
-        pokemon.setGender(Gender.FEMALE);
+    private TypedActionResult<ItemStack> useError(ServerPlayerEntity player, Pokemon pokemon, ItemStack itemStack, String translationKey) {
+        player.playSoundToPlayer(SoundEvents.ITEM_SHIELD_BLOCK, SoundCategory.PLAYERS, 1F, 1F);
+        player.sendMessage(Text.translatable(translationKey, pokemon.getSpecies().getTranslatedName()).formatted(Formatting.RED));
+        return TypedActionResult.fail(itemStack);
     }
 
     @Override
     public void applyToBattlePokemon(@NotNull ServerPlayerEntity serverPlayerEntity, @NotNull ItemStack itemStack, @NotNull BattlePokemon battlePokemon) {
-
+        throw new UnsupportedOperationException("GenderSwapper cannot be used during battle.");
     }
 
     @Override
     public boolean canUseOnPokemon(@NotNull Pokemon pokemon) {
-        return true;
+        return pokemon.getGender() != Gender.GENDERLESS;
     }
 
     @Override
